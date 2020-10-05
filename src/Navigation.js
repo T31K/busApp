@@ -10,17 +10,12 @@ function Navigation(){
   // const element = <FontAwesomeIcon icon={faSlidersH} />
   return(
     
-  <Navbar collapseOnSelect expand="lg">
-  
-  <Navbar.Brand href="#home">busApp</Navbar.Brand>
-  <Navbar.Toggle aria-controls="responsive-navbar-nav"/>
-  <Navbar.Collapse id="responsive-navbar-nav">
-    <Nav className="float-right text-right">
-      <Nav.Link href="#features">Add New</Nav.Link>
-      <Nav.Link href="#pricing">About</Nav.Link>
+    <Navbar.Collapse id="basic-navbar-nav">
+    <Nav className="ml-auto">
+      <Nav.Link href="#one">Haha</Nav.Link>
+      <Nav.Link href="#two">sdfsdf</Nav.Link>
     </Nav>
   </Navbar.Collapse>
-</Navbar>
   )
 }
 
