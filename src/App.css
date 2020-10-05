@@ -72,3 +72,7 @@ body{
   border:none;
 }
 
+.card-custom{
+  width: 500px;
+  height: 70%;
+}
