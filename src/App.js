@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Draggable from 'react-draggable';
 import './App.css';
 
 
@@ -46,32 +47,42 @@ class App extends Component{
     
     return (
     
-    <div className="App">
-      
+    <div>
+ 
     <p>{this.state.code}</p>
-      
+
+   
+  
     {
       this.state.bus ?
-      this.state.bus.map( (bus, i) => (<div key={i}>
-        
-        <h1>Bus {bus.ServiceNo}</h1> 
-        <h1>{Number(bus.NextBus.EstimatedArrival.slice(14,16)) - 1 - time_now > 0 ? Number(bus.NextBus.EstimatedArrival.slice(14,16)) - 1 - time_now + ' mins': 'Arrived!' }</h1>
-        <h2>{Number(bus.NextBus2.EstimatedArrival.slice(14,16)) - 1 - time_now > 0 ? Number(bus.NextBus2.EstimatedArrival.slice(14,16)) - 1 - time_now + ' mins' : 'Arrived!' } </h2> 
+
+      this.state.bus.map( (bus, i) => (
+      <div key={i}>
+      <Draggable
+      axis="both"
+      handle=".handle"
+      defaultPosition={{x: 0, y: 0}}
+      position={null}
+      grid={[25, 25]}
+      scale={1}
+      onStart={this.handleStart}
+      onDrag={this.handleDrag}
+      onStop={this.handleStop} >
+        <div>
+          <button className="handle">Drag from here</button>
+          <h1>Bus {bus.ServiceNo}</h1> 
+          <h1>{Number(bus.NextBus.EstimatedArrival.slice(14,16)) - 1 - time_now > 0 ? Number(bus.NextBus.EstimatedArrival.slice(14,16)) - 1 - time_now + ' mins': 'Arrived!' }</h1>
+          <h2>{Number(bus.NextBus2.EstimatedArrival.slice(14,16)) - 1 - time_now > 0 ? Number(bus.NextBus2.EstimatedArrival.slice(14,16)) - 1 - time_now + ' mins' : 'Arrived!' } </h2> 
+        </div>
+        </Draggable>   
         </div>) ) : null 
-      }
+        
+    }
+     
       <input type="text"  placeholder="BUS CODE" value={this.state.code}  onChange={this.handleCode}/>
-
-
-  
-      
-    
-    
-
-      
-          
-  
         <button onClick={this.handleSubmit}>hello</button>   
-      </div>
+        </div>
+  
      
     )
     }
