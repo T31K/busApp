@@ -19,6 +19,7 @@
     "react-flip-page": "^1.6.4",
     "react-pageflip": "^1.0.0",
     "react-rnd": "^10.2.3",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3"
   },
   "scripts": {

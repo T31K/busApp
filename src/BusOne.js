@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import Navigation from "./Navigation"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import {fetchapi} from "./fetchapi"
@@ -70,7 +69,7 @@ class BusOne extends Component{
       
       <p></p>
 
-        <div className="multi-button">
+        <div className="multi-button" >
         <button className="fas fa-heart" onClick={this.handleSubmit}>S</button>
         <button className="fas fa-share-alt">D</button>
         <button className="fas fa-trash">E</button>
