@@ -34,10 +34,10 @@ class BusOne extends Component{
 
     async handleSubmit() {
     try {
-      // setInterval(async () => {
+      setInterval(async () => {
         const response = await fetchapi(this.state.code)
         this.setState({bus: response.Services})
-      // }, 30000);
+      }, 30000);
     } catch(e) {
       console.log(e);
     }
