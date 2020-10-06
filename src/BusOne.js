@@ -49,7 +49,6 @@ class BusOne extends Component{
     let time_now = Number(d.toLocaleTimeString().slice(3,5))
     // console.log('render: time_check'+time_check)
     // let time_now = 0/
-    // time check forumla
     // time_check > 50 ?  time_now = time_check + 60 : time_now = time_check
     return (
     
