@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
 
+button{
+  background: none;
+  border:none;
+  outline: none;
+}
+
+button:active{
+  background: none;
+  border:none;
+  outline: none;
+}
 
 .btn-custom{
   background: none;
@@ -28,7 +39,7 @@
 body {
   margin: 0;
   background-color: #292929;
-  overflow: hidden;
+  
   background: #f6f6f6;
 }
 
@@ -43,14 +54,14 @@ body {
 }
 
 .busnumber{
-  color: blue;
+  color: #222;
   text-align : justify;
   margin-left: 2em !important;
 }
 
 
 span{
-  color: red;
+  color: #222;
 }
 
 .card .multi-button {

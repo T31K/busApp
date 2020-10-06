@@ -2,7 +2,8 @@ import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import {fetchapi} from "./fetchapi"
-
+import { faSearch, faUserEdit, faCog } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const color = {
   background: "#ffb6b9"
@@ -13,9 +14,11 @@ class BusOne extends Component{
     super()
     this.handleCode = this.handleCode.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+    this.handleName = this.handleName.bind(this)
     this.state = {
       bus: [],
       code : 78049,
+      name: ''
     }
   
   }
@@ -23,6 +26,11 @@ class BusOne extends Component{
     e.preventDefault()
     this.setState({code: e.target.value});
  }
+
+ handleName(e) {
+  e.preventDefault()
+  this.setState({name: e.target.value});
+}
 
     async handleSubmit() {
     try {
@@ -38,16 +46,18 @@ class BusOne extends Component{
   render(){
     
     let d = new Date();
-    let time_check = Number(d.toLocaleTimeString().slice(3,5))
-    let time_now = 0
-    time_check > 50 ?  time_now = time_check + 60 : time_now += time_check
+    let time_now = Number(d.toLocaleTimeString().slice(3,5))
+    // console.log('render: time_check'+time_check)
+    // let time_now = 0
+    // time_check > 50 ?  time_now = time_check + 60 : time_now = time_check
     return (
     
       <div>
       <div>
       <div className="card" style={color}>
       
-      <input className="text-center input-custom mb-2" type="text"  placeholder="5 DIGIT CODE" value={this.state.code}  onChange={this.handleCode}/>
+      <input className="text-center input-custom mt-2" type="text"  placeholder="Custom Name" value={this.state.name}  onChange={this.handleName}/>
+      <input className="text-center input-custom mb-2 mt-2" type="text"  placeholder="5 DIGIT CODE" value={this.state.code}  onChange={this.handleCode}/>
      
 
     { this.state.bus ?
@@ -56,6 +66,7 @@ class BusOne extends Component{
               <h2 className="busnumber">{bus.ServiceNo} →
              
               <span>{console.log(Number(bus.NextBus.EstimatedArrival.slice(14,16)))}
+                  
                     { Number(bus.NextBus.EstimatedArrival.slice(14,16)) - time_now > 0 ? 
                       Number(bus.NextBus.EstimatedArrival.slice(14,16)) - time_now : "Arrived" }
                       </span></h2> 
@@ -69,10 +80,10 @@ class BusOne extends Component{
       
       <p></p>
 
-        <div className="multi-button" >
-        <button className="fas fa-heart" onClick={this.handleSubmit}>S</button>
-        <button className="fas fa-share-alt">D</button>
-        <button className="fas fa-trash">E</button>
+        <div className="multi-button mt-2">
+        <button className="fas fa-heart" onClick={this.handleSubmit}><FontAwesomeIcon icon={faSearch} /></button>
+        <button className="fas fa-trash"><FontAwesomeIcon icon={faUserEdit} /></button>
+        <button className="fas fa-trash"><FontAwesomeIcon icon={faCog} /></button>
         </div>
      
   </div>
