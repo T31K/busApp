@@ -28,10 +28,12 @@ button:active{
   border:none;
   outline: none;
   font-size: 2em;
+
 }
 .input-custom:active{
   background: none;
   border:none;
+
 }
 
 
@@ -40,9 +42,13 @@ button:active{
 body {
   margin: 0;
   background-color: #292929;
-  
+  text-transform: capitalize;
+  font-family: Verdana, Geneva,Tahoma , sans-serif;
+  font-weight: bold;
   background: #f6f6f6;
 }
+
+
 
 .card {
   background: white;
@@ -173,8 +179,7 @@ nav a
     text-align: center;
     color: #686d76;
     text-decoration: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
+    
     padding: 10px 20px;
     transition: 0.2s ease color;
 }

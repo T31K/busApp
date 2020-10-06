@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Container, Row, Col} from "react-bootstrap"
 import './App.css';
 import {fetchapi} from "./fetchapi"
-import { faSearch, faUserEdit, faCog } from "@fortawesome/free-solid-svg-icons";
+import { faSearch, faUserEdit, faCog , faArrowAltCircleRight} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const color = {
@@ -34,6 +35,8 @@ class BusOne extends Component{
 
     async handleSubmit() {
     try {
+      const response = await fetchapi(this.state.code)
+      this.setState({bus: response.Services})
       setInterval(async () => {
         const response = await fetchapi(this.state.code)
         this.setState({bus: response.Services})
@@ -63,15 +66,26 @@ class BusOne extends Component{
     { this.state.bus ?
           this.state.bus.map( (bus, i) => (
             <div key={i}>
-              <h2 className="busnumber">{bus.ServiceNo} →
-             
-              <span>{console.log(Number(bus.NextBus.EstimatedArrival.slice(14,16)))}
-                  
-                    { Number(bus.NextBus.EstimatedArrival.slice(14,16)) - time_now > 0 ? 
-                      Number(bus.NextBus.EstimatedArrival.slice(14,16)) - time_now : "Arrived" }
-                      </span></h2> 
-                    
-        
+              <Row>
+            <Col lg={4} md={4} sm={4}>
+              <span className="text-leftborder" >{bus.ServiceNo}  </span> 
+            </Col> 
+
+
+            <Col lg={4} md={4} sm={4}>
+            <span>
+                <FontAwesomeIcon className='text-center' icon={faArrowAltCircleRight} />
+                 </span> 
+            </Col> 
+            
+            <Col lg={4} md={4} sm={4}>
+              <span className="">{console.log(Number(bus.NextBus.EstimatedArrival.slice(14,16)))}
+                  { Number(bus.NextBus.EstimatedArrival.slice(14,16)) - time_now > 0 ? 
+                    Number(bus.NextBus.EstimatedArrival.slice(14,16)) - time_now : "Arrived" }
+              </span>
+            </Col> 
+              </Row>
+      
             </div>
       ) ) : null 
         
@@ -81,9 +95,9 @@ class BusOne extends Component{
       <p></p>
 
         <div className="multi-button mt-2">
-        <button className="fas fa-heart" onClick={this.handleSubmit}><FontAwesomeIcon icon={faSearch} /></button>
-        <button className="fas fa-trash"><FontAwesomeIcon icon={faUserEdit} /></button>
-        <button className="fas fa-trash"><FontAwesomeIcon icon={faCog} /></button>
+        <button  onClick={this.handleSubmit}><FontAwesomeIcon icon={faSearch} /></button>
+        <button ><FontAwesomeIcon icon={faUserEdit} /></button>
+        <button ><FontAwesomeIcon icon={faCog} /></button>
         </div>
      
   </div>
