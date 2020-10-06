@@ -8,7 +8,7 @@ const requestOptions = {
   redirect: 'follow'
 };
 
-export const fetchapi = async () => {
-const response = await fetch(`https://cors-anywhere.herokuapp.com/http://datamall2.mytransport.sg/ltaodataservice/BusArrivalv2?BusStopCode=78049`, requestOptions)
+export const fetchapi = async (bus_code) => {
+const response = await fetch(`https://cors-anywhere.herokuapp.com/http://datamall2.mytransport.sg/ltaodataservice/BusArrivalv2?BusStopCode=${bus_code}`, requestOptions)
   return await response.json();
 }

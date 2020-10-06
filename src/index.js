@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import BusFour from "./BusFour"
 import * as serviceWorker from './serviceWorker';
 
 

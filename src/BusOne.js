@@ -4,14 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import {fetchapi} from "./fetchapi"
 
-class BusTwo extends Component{
+class BusOne extends Component{
   constructor(){
     super()
     this.handleCode = this.handleCode.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
     this.state = {
       bus: [],
-      code : 77011,
+      code : 78049,
     }
   
   }
@@ -62,5 +62,5 @@ class BusTwo extends Component{
     
   )}
 }
-export default BusTwo;
+export default BusOne;
 
