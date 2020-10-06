@@ -1,24 +1,70 @@
 import React, {Component} from 'react';
-import Draggable from 'react-draggable';
 import Navigation from "./Navigation"
-import {Rnd} from 'react-rnd';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import BusOne from "./BusOne"
-import BusTwo from "./BusTwo"
-import BusThree from "./BusThree"
-import BusFour from "./BusFour"
+import {fetchapi} from "./fetchapi"
 
-function App(){
-  return(
-    <div>
-    <BusOne/>
-    <BusTwo/>
-    <BusThree/>
-    <BusFour/>
+class App extends Component{
+  constructor(){
+    super()
+    this.handleCode = this.handleCode.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    this.state = {
+      bus: [],
+      code : 78049
+    }
+  
+  }
+  handleCode(e) {
+    e.preventDefault()
+    this.setState({code: e.target.value});
+ }
+
+
+
+    async handleSubmit() {
+    try {
+      setInterval(async () => {
+        const response = await fetchapi()
+        this.setState({bus: response.Services})
+      }, 20000);
+    } catch(e) {
+      console.log(e);
+    }
+    }
+
+  render(){
+    
+    let d = new Date();
+    let time_now = Number(d.toLocaleTimeString().slice(3,5))
+    return (
+    
+      <div>
+      <div>
+      <div className="card">
+
+      <p>Bus code {this.state.code}</p>
+      <div className="card-bg">
+
+      <input className="text-center input-custom" type="text"  placeholder="5 DIGIT CODE" value={this.state.code}  onChange={this.handleCode}/>
+      <p></p>
+   
+          
+
+        <div className="multi-button">
+        <button className="fas fa-heart" onClick={this.handleSubmit}>S</button>
+        <button className="fas fa-share-alt">D</button>
+        <button className="fas fa-trash">E</button>
+        </div>
+      </div>
+  </div>
+
     </div>
-  )
-}
 
+
+</div>
+    
+  )}
+}
 export default App;
 
