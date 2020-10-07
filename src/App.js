@@ -14,17 +14,17 @@ function App(){
         return (
           <div> 
                   <div className="mr-5 ml-5">
-                  <Row>
-                  <Col className="boblue" xl={3} lg={4} md={6} sm={12}>
+                  <Row >
+                  <Col xl={3} lg={4} md={6} sm={12}>
                     <BusOne/>
                   </Col>
-                  <Col className="bored" xl={3} lg={4} md={6} sm={12}>
+                  <Col  xl={3} lg={4} md={6} sm={12}>
                   <BusTwo/>
                 </Col>
-                <Col className="boblue" xl={3} lg={4} md={6} sm={12}>
+                <Col  xl={3} lg={4} md={6} sm={12}>
                   <BusThree/>
                 </Col>
-                <Col  className="bored" xl={3} lg={4} md={6} sm={12}>
+                <Col  xl={3} lg={4} md={6} sm={12}>
                   <BusFour/>
                 </Col>
                   </Row>

@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const customCard = {
   background: "#bbded6",
-  margin : "0",
+  margin : "1.5em 0 0 0 ",  
   width: "100%"
 }
 

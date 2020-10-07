@@ -7,8 +7,8 @@ import { faSearch, faUserEdit, faCog , faArrowAltCircleRight} from "@fortawesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const customCard = {
-  background: "#ffb6b9",
-  margin : "0",
+  background: "#fae3d9",
+  margin : "1.5em 0 0 0 ",  
   width: "100%"
 }
 
