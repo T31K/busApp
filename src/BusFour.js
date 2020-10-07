@@ -29,7 +29,7 @@ class BusFour extends Component{
     this.handleVisibility = this.handleVisibility.bind(this)
     this.state = {
       bus: [],
-      code : 78049,
+      code : 68011,
       name: '',
       inputOpacity: false
     }
