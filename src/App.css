@@ -278,3 +278,24 @@ ul,li {
   margin:0;
   padding:0; 
 }
+
+.font-custom{
+  font-size: 1.8em;
+}
+
+.mleft{
+  margin-left: 2em;
+}
+
+
+.row{
+  line-height: 1.0;
+}
+
+.bored{
+  border:3px solid red;
+}
+
+.boblue{
+  border: 3px solid blue;
+}
