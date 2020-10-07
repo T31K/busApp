@@ -3,7 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import {fetchapi} from "./fetchapi"
 import App from './App';
-import AboutPage from "./AboutPage";
+import About from "./About";
+import { Link } from 'react-router-dom';
 
 
 class Bar extends Component{
@@ -22,9 +23,9 @@ class Bar extends Component{
       
       <div className="bar">
       <nav>
-  <a href="#">HOME</a>
-  <a href="#">ABOUT</a>
-  <a href="#">CONTACT</a>
+      <a><Link to="/">HOME</Link></a>
+      <a><Link to="/about">ABOUT</Link></a>
+      <a><Link to="/help">HELP</Link></a>
   <div id="indicator"></div>
 </nav>
       </div>

@@ -5,7 +5,7 @@ import {fetchapi} from "./fetchapi"
 
 
 
-class AboutPage extends Component{
+class About extends Component{
   constructor(){
     super()
    
@@ -25,5 +25,5 @@ class AboutPage extends Component{
   )}
 }
 
-export default AboutPage;
+export default About;
 

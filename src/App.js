@@ -7,7 +7,6 @@ import BusOne from "./BusOne"
 import BusTwo from "./BusTwo"
 import BusThree from "./BusThree"
 import BusFour from "./BusFour"
-import AboutPage from "./AboutPage"
 import Bar from "./Bar"
 
 
@@ -15,7 +14,6 @@ function App(){
         return (
           <div> 
                   <div className="mr-5 ml-5">
-                  <Bar/>
                   <Row>
                   <Col lg={3} md={6} sm={12}>
                     <BusOne/>
