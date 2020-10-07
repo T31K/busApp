@@ -41,7 +41,6 @@ button:active{
 body {
   margin: 0;
   background-color: #292929;
-  text-transform: capitalize;
   font-family: 'Josefin Sans', sans-serif;
   font-weight: bold;
   background: #f6f6f6;
