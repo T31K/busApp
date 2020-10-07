@@ -5,7 +5,7 @@ import {fetchapi} from "./fetchapi"
 import App from './App';
 import About from "./About";
 import { Link } from 'react-router-dom';
-
+import logo from "./static/logo.png"
 
 class Bar extends Component{
   constructor(){
