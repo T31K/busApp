@@ -10,7 +10,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const customCard = {
   background: "#f6def6",
-  height: "135vh",
+  height: "125vh",
   margin : "0"
 }
 
