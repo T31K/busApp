@@ -272,6 +272,9 @@ nav a:nth-child(3):hover ~ #indicator
   z-index: 125;
 }
 
-ul {
+ul,li { 
   list-style-type: none;
+  list-style-position:inside;
+  margin:0;
+  padding:0; 
 }
