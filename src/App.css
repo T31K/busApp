@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
 
 button{
   background: none;
@@ -43,15 +42,16 @@ body {
   margin: 0;
   background-color: #292929;
   text-transform: capitalize;
-  font-family: Verdana, Geneva,Tahoma , sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
   font-weight: bold;
   background: #f6f6f6;
 }
 
 
-
 .card {
   background: white;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold !important;
   color: #515070;
   border: none;
   border-radius: 14px;
@@ -81,9 +81,7 @@ span{
   height: 0rem;
   transform: translate(-50%, -50%);
   transition: 0.25s cubic-bezier(0.25, 0, 0, 1);
-
- 
-}
+ }
 .card .multi-button button {
   display: grid;
   place-items: center;
@@ -255,7 +253,7 @@ nav a:nth-child(2):hover ~ #indicator
 nav a:nth-child(3):hover ~ #indicator
 {
     left: 70%;
-    background: #75b79e;
+    background: #28df99;
 }
 
 #ytd-url {
