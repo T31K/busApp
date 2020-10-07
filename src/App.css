@@ -271,3 +271,7 @@ nav a:nth-child(3):hover ~ #indicator
   box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
   z-index: 125;
 }
+
+ul {
+  list-style-type: none;
+}
