@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "HEROKU_TO_REACT_APP_VARIABLES=HEROKU_SLUG_COMMIT, HEROKU_VAR_2 react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

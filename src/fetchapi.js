@@ -1,5 +1,5 @@
 const myHeaders = new Headers();
-myHeaders.append("AccountKey", 'SsmusG4IRl2bt/N+BsE21A==');
+myHeaders.append("AccountKey", process.env.REACT_APP_acc_key);
 myHeaders.append("accept", "application/json");
 const requestOptions = {
   method: 'GET',
