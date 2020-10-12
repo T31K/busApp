@@ -85,8 +85,8 @@ handleVisibility() {
            
 
             <Row className="rows" key={i}>
-            <Col  className="pl-4" lg={4} md={4} sm={4} xs={4}>
-              <span className=" text-left font-custom ml-1 mb-2" >{bus.ServiceNo}  </span> 
+            <Col  className="" lg={4} md={4} sm={4} xs={4}>
+              <span className=" text-left font-custom ml-4 mb-2" >{bus.ServiceNo}  </span> 
             </Col> 
 
 

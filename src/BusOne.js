@@ -50,18 +50,21 @@ handleVisibility() {
   this.setState({inputOpacity: !this.state.inputOpacity})
 }
 
-    async handleSubmit() {
-    try {
-      const response = await fetchapi(this.state.code)
-      this.setState({bus: response.Services})
-      setInterval(async () => {
-        const response = await fetchapi(this.state.code)
-        this.setState({bus: response.Services})
-      }, 30000);
-    } catch(e) {
-      console.log(e);
-    }
-    }
+
+async handleSubmit() {
+try {
+  // #1 GET FIRST INSTANCE OF DATA & SETSTATE
+  const response = await fetchapi(this.state.code)
+  this.setState({bus: response.Services})
+  // #2 FETCH AND UPDATE EVERY 30 SECS
+  setInterval(async () => {
+    const response = await fetchapi(this.state.code)
+    this.setState({bus: response.Services})
+  }, 30000);
+} catch(e) {
+  console.log(e);
+}
+}
 
   render(){
     
@@ -85,8 +88,8 @@ handleVisibility() {
            
 
             <Row className="rows" key={i}>
-            <Col  className="pl-4" lg={4} md={4} sm={4} xs={4}>
-              <span className=" text-left font-custom ml-1 mb-2" >{bus.ServiceNo}  </span> 
+            <Col  className="" lg={4} md={4} sm={4} xs={4}>
+              <span className=" text-left font-custom ml-4 mb-2" >{bus.ServiceNo}  </span> 
             </Col> 
 
 
