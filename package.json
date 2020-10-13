@@ -86,8 +86,11 @@
   "browserslist": {
     "production": [
       ">0.2%",
-      "not dead",
-      "not op_mini all"
+      "dead",
+      "not op_mini all",
+      "iOS 7",
+      "iOS 8",
+      "iOS 9"
     ],
     "development": [
       "iOS 9",
