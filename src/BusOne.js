@@ -101,8 +101,10 @@ try {
             
             <Col lg={6} md={6} sm={6} xs={6}>
               <span className="text-right font-custom mr-2">{console.log(Number(bus.NextBus.EstimatedArrival.slice(14,16)))}
-                  { Number(bus.NextBus.EstimatedArrival.slice(14,16)) - time_now > 0 ? 
-                    Number(bus.NextBus.EstimatedArrival.slice(14,16)) - time_now + " mins": "Arrived" }
+                  { Number(bus.NextBus.EstimatedArrival.slice(14,16)) - time_now > 0   ? 
+                    Number(bus.NextBus.EstimatedArrival.slice(14,16)) < time_now ? Number(bus.NextBus.EstimatedArrival.slice(14,16)) + 60 - time_now :
+                    Number(bus.NextBus.EstimatedArrival.slice(14,16)) - time_now + " mins"
+                    : "Arrived" }
               </span>
             </Col> 
               </Row>

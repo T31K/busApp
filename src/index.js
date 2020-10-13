@@ -1,12 +1,11 @@
 import 'react-app-polyfill/stable';
+import 'raf/polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Routes } from './Routes'; 
-
-
 
 ReactDOM.render(
   <Router>
