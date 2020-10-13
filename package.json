@@ -90,7 +90,9 @@
       "not op_mini all",
       "iOS 7",
       "iOS 8",
-      "iOS 9"
+      "iOS 9",
+      "since 2015",
+      "chrome <= 64"
     ],
     "development": [
       "iOS 9",
