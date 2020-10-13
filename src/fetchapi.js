@@ -1,3 +1,5 @@
+import 'babel-polyfill'
+import fetch from 'cross-fetch' 
 const myHeaders = new Headers();
 myHeaders.append("AccountKey", 'SsmusG4IRl2bt/N+BsE21A==');
 myHeaders.append("accept", "application/json");
