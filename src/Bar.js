@@ -2,20 +2,11 @@
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import {fetchapi} from "./fetchapi"
-import App from './App';
-import About from "./About";
 import { Link } from 'react-router-dom';
-import logo from "./static/logo.png"
 
 class Bar extends Component{
-  constructor(){
-    super()
+
    
-    }
-  
-  
-  
 
   render(){
    
@@ -24,9 +15,9 @@ class Bar extends Component{
       
       <div className="bar">
       <nav>
-      <a><Link to="/">HOME</Link></a>
-      <a><Link to="/about">ABOUT</Link></a>
-      <a><Link to="/help">HELP</Link></a>
+      <Link to="/">HOME</Link>
+      <Link to="/about">ABOUT</Link>
+      <Link to="/help">HELP</Link>
   <div id="indicator"></div>
 </nav>
       </div>

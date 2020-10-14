@@ -3,8 +3,7 @@ import React, {Component} from 'react';
 import {Container, Row, Col} from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import {fetchapi} from "./fetchapi"
-import { faLaptop, faLaptopCode, faCheckSquare, faQuestionCircle} from "@fortawesome/free-solid-svg-icons";
+import { faLaptopCode, faQuestionCircle} from "@fortawesome/free-solid-svg-icons";
 import { faThumbsUp, faStar, faFileCode, faMedal, faStream} from "@fortawesome/free-solid-svg-icons";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,14 +21,8 @@ const fontColor = {
 
 
 class About extends Component{
-  constructor(){
-    super()
    
-    }
-  
-  
-  
-  render(){
+    render(){
 
   return (
       <Container>

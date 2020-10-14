@@ -1,13 +1,9 @@
 import 'babel-polyfill'
-import fetch from 'cross-fetch' 
 import React, {Component} from 'react';
 import {Container, Row, Col} from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import {fetchapi} from "./fetchapi"
-import { faLaptopCode, faCheckSquare, faQuestionCircle} from "@fortawesome/free-solid-svg-icons";
-import { faThumbsUp, faStar, faFileCode, faMedal, faStream} from "@fortawesome/free-solid-svg-icons";
-import { faInfoCircle, faSearch, faUserEdit, faCog , faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { faInfoCircle, faSearch, faUserEdit, faCog } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const customCard = {
@@ -23,11 +19,6 @@ const fontColor = {
 
 
 class Help extends Component{
-  constructor(){
-    super()
-   
-    }
-  
  
   render(){
 

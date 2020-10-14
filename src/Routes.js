@@ -4,7 +4,7 @@ import App  from './App';
 import About  from './About';
 import Bar  from './Bar';
 import Help from "./Help"
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 export const Routes = () => {
     return (

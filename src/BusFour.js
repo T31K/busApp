@@ -1,7 +1,6 @@
-import fetch from 'cross-fetch' 
 import React, {Component} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Container, Row, Col} from "react-bootstrap"
+import {Row, Col} from "react-bootstrap"
 import './App.css';
 import {fetchapi} from "./fetchapi"
 import { faSearch, faUserEdit, faCog , faArrowAltCircleRight} from "@fortawesome/free-solid-svg-icons";

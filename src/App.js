@@ -1,14 +1,12 @@
 
-import React, {Component} from 'react';
-import {  Switch, Route, Router} from 'react-router-dom';
-import {Container, Row, Col} from "react-bootstrap"
+import React from 'react';
+import { Row, Col} from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import BusOne from "./BusOne"
 import BusTwo from "./BusTwo"
 import BusThree from "./BusThree"
 import BusFour from "./BusFour"
-import Bar from "./Bar"
 
 
 function App(){
